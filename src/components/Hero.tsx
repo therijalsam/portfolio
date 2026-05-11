@@ -64,7 +64,7 @@ export function Hero() {
           {/* Right: Paragraph + Buttons */}
           <div className="space-y-6 text-center md:text-left">
             <p className="text-lg text-gray-700 max-w-md mx-auto md:mx-0">
-              I am an aspiring Software Engineer with a passion for technology and innovation. Currently pursuing my degree in Electrical Engineering at TXST while engaging in exciting research projects.
+              I am an aspiring Embedded Software and Robotics Engineer passionate about low-level systems, real-time software, and intelligent autonomous technologies. Currently pursuing a degree in Electrical Engineering at Texas State University while conducting research in robotics visualization, drone planning systems, and interactive C++ software development.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
