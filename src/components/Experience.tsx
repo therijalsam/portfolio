@@ -5,6 +5,7 @@ import {
   Briefcase,
   User,
   BookOpen,
+  Group,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -19,23 +20,20 @@ export function Experience() {
       minor: "Mathematics Minor",
       date: "Expected Graduation: May 2028",
     },
-    {
-      icon: <Briefcase className="w-6 h-6 text-gray-800" />,
-      title: "Internship",
-      subtitle: "Software Engineering Intern at XYZ Corp.",
-      date: "June 2023 – August 2023",
-    },
-    {
-      icon: <User className="w-6 h-6 text-gray-800" />,
-      title: "Part-Time",
-      subtitle: "Teaching Assistant, Electrical Engineering Dept.",
-      date: "September 2022 – Present",
-    },
+    
+    
     {
       icon: <BookOpen className="w-6 h-6 text-gray-800" />,
       title: "Research",
-      subtitle: "Embedded systems under Prof. Smith",
-      date: "September 2022 – Present",
+      subtitle: "Embedded systems",
+      date: "January 2025 – Present",
+    },
+
+    {
+      icon: <Briefcase className="w-6 h-6 text-gray-800" />,
+      title: "Vice-President",
+      subtitle: "Google Developers Group TXST",
+      date: "Nov 2024 – Present",
     },
   ];
 
