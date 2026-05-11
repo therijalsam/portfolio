@@ -6,9 +6,11 @@ import {
   Code2,
   ChevronLeft,
   ChevronRight,
+  Cone,
 } from 'lucide-react';
 import shiftappImage from './image/shiftmakerapp.png';
 import imagecoor from './image/imagecoorproject.png';
+import cone from './image/cone.jpg'
 
 interface Project {
   title: string;
@@ -22,16 +24,15 @@ interface Project {
 export const Projects: React.FC = () => {
   // Your original projects
   const baseProjects: Project[] = [
+
     {
-      title: 'Shift Maker App',
+      title: 'Cone',
       description:
-        'Shift Making App is a modern web application built with React TSX and Vite, designed to streamline shift schedule management. Users can create, view, and generate shift schedules for multiple days, with the ability to track employee availability and set maximum working hours. The app offers a smooth, responsive interface using Lucide React components and allows users to download schedules as PDFs. With features like customizable time slots and employee assignment, it is perfect for managing shifts efficiently. Developed with Node.js and optimized for fast performance.',
-      image: shiftappImage,
-      github: 'https://github.com/therijalsam/Shiftmakerapp.git',
-      preview:
-        'https://shiftmakerapp-7gxx9dadd-therijalsams-projects.vercel.app/',
-      techStack: ['React', 'TypeScript', 'Lucide React', 'Node.js', 'Vite'],
+        'A cross-platform device management agent and CLI for LAN discovery, remote command execution, secure file transfer, and real-time system metrics monitoring across Linux, Raspberry Pi, Debian, and Ubuntu devices.',
+      image: cone ,
+      techStack: ['C++', 'CMake', 'Linux', 'UDP', 'Networking', 'Raspberry Pi', 'Makefile'],
     },
+
     {
       title: 'Image Click Coordinates Tracker',
       description:
@@ -48,6 +49,45 @@ export const Projects: React.FC = () => {
         'Docker',
       ],
     },
+
+    {
+      title: '3D Using SDL3',
+      description:
+        'A lightweight 3D rendering and visualization project built with SDL3 and C++ that demonstrates camera movement, object rendering, coordinate transformations, and real-time graphics programming on Linux systems.',
+      image:
+        'lorem',
+      techStack: ['C++', 'SDL3', 'OpenGL', 'CMake', 'Linux'],
+    },
+
+
+    {
+      title: 'SPI Inertial Measurement System',
+      description:
+        'A low-level embedded systems project that interfaces with an inertial measurement sensor over SPI communication to collect and process accelerometer and gyroscope data in real time using register-level programming and microcontroller peripherals.',
+      image:
+        'lorem',
+      techStack: ['C', 'SPI', 'Embedded Systems', 'Microcontrollers', 'UART', 'Linux'],
+    },
+
+    {
+      title: 'Distributed Stoplight System using GPIO',
+      description:
+        'A distributed embedded systems project that simulates an intelligent traffic stoplight network using GPIO communication, synchronized state control, and low-level hardware interfacing for real-time traffic signal management.',
+      image:
+        'lorem',
+      techStack: ['React', 'Redux', 'Node.js', 'Socket.io', 'MongoDB'],
+    },
+
+    {
+      title: 'Shift Maker App',
+      description:
+        'Shift Making App is a modern web application built with React TSX and Vite, designed to streamline shift schedule management. Users can create, view, and generate shift schedules for multiple days, with the ability to track employee availability and set maximum working hours. The app offers a smooth, responsive interface using Lucide React components and allows users to download schedules as PDFs. With features like customizable time slots and employee assignment, it is perfect for managing shifts efficiently. Developed with Node.js and optimized for fast performance.',
+      image: shiftappImage,
+      github: 'https://github.com/therijalsam/Shiftmakerapp.git',
+      preview:
+        'https://shiftmakerapp-7gxx9dadd-therijalsams-projects.vercel.app/',
+      techStack: ['React', 'TypeScript', 'Lucide React', 'Node.js', 'Vite'],
+    },
     
     {
       title: 'lorem',
@@ -57,30 +97,7 @@ export const Projects: React.FC = () => {
         'lorem',
       techStack: ['React', 'Redux', 'Node.js', 'Socket.io', 'MongoDB'],
     },
-    {
-      title: 'lorem',
-      description:
-        'lorem',
-      image:
-        'lorem',
-      techStack: ['React', 'Redux', 'Node.js', 'Socket.io', 'MongoDB'],
-    },
-    {
-      title: 'lorem',
-      description:
-        'lorem',
-      image:
-        'lorem',
-      techStack: ['React', 'Redux', 'Node.js', 'Socket.io', 'MongoDB'],
-    },
-    {
-      title: 'lorem',
-      description:
-        'lorem',
-      image:
-        'lorem',
-      techStack: ['React', 'Redux', 'Node.js', 'Socket.io', 'MongoDB'],
-    },
+    
   ];
 
   // Responsive visible count: 1 on mobile, 2.5 on md+
