@@ -1,52 +1,166 @@
 import React from 'react';
-import { Eye } from 'lucide-react';
-import myImage from './image/IMG_0086.jpg';
+import { Eye, Cpu, Terminal, Bot } from 'lucide-react';
+import myImage from './image/profile.jpeg';
 
 export function About() {
   return (
     <>
-      {/* Divider between Hero and About */}
-      <hr className="my-16 border-t-2 border-gray-200" />
+      {/* Divider */}
+      <div className="w-full border-t border-gray-200" />
 
-      <section id="about" className="py-20 bg-white font-sen">
-        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-          {/* Intro: text + large avatar + button */}
-          <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-12 mb-16">
-            {/* Left: Text */}
-            <div className="flex-1 space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-                Passionate about technology and driven to innovate in software engineering.
-              </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed max-w-lg">
-              <p>
-                 I'm an undergraduate student in Electrical Engineering with a strong focus on Computer Engineering and applied software development. I love working at the intersection of hardware, algorithms, and user interaction—whether it's building interactive drone planning tools, experimenting with vision-language models, or automating interfaces with C++ and ImGui.
-                </p>
-                <p>
-                 Currently, I’m working as an undergraduate research assistant, where I help design systems for visual planning, real-time image processing, and intelligent automation. From GUI-based drone deployments to resource-efficient AI pipelines, I’m always looking for ways to make complex technology feel seamless and human-centered.
-                   </p>
-                 <p>
-                My goal is to keep exploring areas where software meets the physical world—whether through robotics, embedded systems, or AI—so I can help create tools that solve meaningful problems and are actually enjoyable to use.
-                    </p>
-                  </div>
-              {/* View Resume button */}
+      <section
+        id="about"
+        className="bg-white py-24 px-6 md:px-10 font-mono"
+      >
+        <div className="max-w-screen-2xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              {/* Small Label */}
               <div>
+                <p className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4">
+                  About Me
+                </p>
+
+                {/* Heading */}
+                <h2 className="text-4xl md:text-5xl font-bold leading-tight text-black">
+                  Embedded Systems,
+                  <br />
+                  Robotics, and
+                  <br />
+                  Low-Level Software Engineering
+                </h2>
+              </div>
+
+              {/* Paragraphs */}
+              <div className="space-y-6 text-gray-700 leading-relaxed text-base md:text-lg">
+                <p>
+                  I am an undergraduate Electrical Engineering student with a
+                  strong focus on Computer Engineering, embedded systems, and
+                  low-level software development. I enjoy building systems that
+                  connect software with real-world hardware through robotics,
+                  firmware, computer vision, and real-time applications.
+                </p>
+
+                <p>
+                  My work primarily involves C++, Linux, SDL3, OpenCV, and
+                  Dear ImGui, where I design interactive visualization tools,
+                  robotics simulation platforms, and high-performance graphical
+                  systems. I am especially interested in systems programming,
+                  hardware-software integration, and autonomous technologies.
+                </p>
+
+                <p>
+                  Currently, I am conducting undergraduate research focused on
+                  drone planning systems and robotics visualization tools. My
+                  research includes real-time image processing, coordinate
+                  computation, simulation-based deployment systems, and
+                  interactive graphical interfaces for autonomous workflows.
+                </p>
+
+                <p>
+                  My long-term goal is to contribute to robotics, embedded
+                  systems, and intelligent autonomous platforms by developing
+                  efficient low-level software that powers reliable and
+                  high-performance systems.
+                </p>
+              </div>
+
+              {/* Tech Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                <div className="border border-gray-200 rounded-xl p-4 hover:border-black transition-all duration-300">
+                  <Cpu className="w-8 h-8 mb-3 text-black" />
+                  <h3 className="font-semibold text-black mb-1">
+                    Embedded Systems
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Firmware, GPIO, UART, SPI, I2C, low-level development
+                  </p>
+                </div>
+
+                <div className="border border-gray-200 rounded-xl p-4 hover:border-black transition-all duration-300">
+                  <Terminal className="w-8 h-8 mb-3 text-black" />
+                  <h3 className="font-semibold text-black mb-1">
+                    Systems Programming
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Linux, C++, multithreading, graphics, performance
+                  </p>
+                </div>
+
+                <div className="border border-gray-200 rounded-xl p-4 hover:border-black transition-all duration-300">
+                  <Bot className="w-8 h-8 mb-3 text-black" />
+                  <h3 className="font-semibold text-black mb-1">
+                    Robotics & AI
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    OpenCV, simulation systems, autonomous platforms
+                  </p>
+                </div>
+              </div>
+
+              {/* Resume Button */}
+              <div className="pt-4">
                 <a
                   href="/resume.html"
-                  className="inline-flex items-center space-x-2 px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-800 transition-colors"
+                  className="
+                    inline-flex
+                    items-center
+                    gap-3
+                    px-7
+                    py-4
+                    bg-black
+                    text-white
+                    rounded-xl
+                    font-semibold
+                    hover:bg-gray-800
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                  "
                 >
                   <Eye className="w-5 h-5" />
-                  <span>View Resume</span>
+                  View Resume
                 </a>
               </div>
             </div>
 
-            {/* Right: Larger Avatar */}
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 overflow-hidden rounded-full shadow-lg flex-shrink-0">
-              <img
-                src={myImage}
-                alt="Samrakshan Rijal"
-                className="w-full h-full object-cover"
-              />
+            {/* Right Image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                {/* Background Border */}
+                <div
+                  className="
+                    absolute
+                    -inset-5
+                    border
+                    border-gray-200
+                    rounded-[2rem]
+                  "
+                />
+
+                {/* Image */}
+                <div
+                  className="
+                    relative
+                    w-[320px]
+                    h-[420px]
+                    md:w-[380px]
+                    md:h-[500px]
+                    overflow-hidden
+                    rounded-[2rem]
+                    shadow-2xl
+                    border
+                    border-gray-200
+                  "
+                >
+                  <img
+                    src={myImage}
+                    alt="Samrakshan Rijal"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
