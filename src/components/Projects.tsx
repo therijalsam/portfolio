@@ -7,9 +7,9 @@ import imagecoor from "./image/imagecoorproject.png";
 import cone from "./image/cone.jpg";
 import conexl from "./image/underconstuct.jpg";
 import sdllds from "./image/3dsdl.png";
-import spiimage from "./image/spi.png";
-import gpioimage from "./image/gpio.png";
-import i2cimage from "./image/i2c.png";
+import spiimage from "./image/spiimage.jpeg";
+import gpioimage from "./image/gpioimg.jpeg";
+import i2cimage from "./image/iic.png";
 import adcservo from "./image/adcservo.jpeg";
 
 interface Project {
