@@ -11,6 +11,7 @@ import spiimage from "./image/spiimage.jpeg";
 import gpioimage from "./image/gpioimg.jpeg";
 import i2cimage from "./image/iic.png";
 import adcservo from "./image/adcservo.jpeg";
+import igptimage from "./image/igpt.png";
 
 interface Project {
   title: string;
@@ -103,7 +104,7 @@ export const Projects: React.FC = () => {
       title: "iGPT AI Desktop Assistant",
       description:
         " A Java desktop AI assistant application built with Java Swing and OpenAI APIs. The project supports conversational AI interactions, AI image generation, configurable personalities, and modern API integration through a desktop interface.",
-      image: image,
+      image: igptimage,
       github: " https://bitbucket.org/oou11/igpt/src/main/src/",
       techStack: [ "Java", "Java Swing","OpenAI API","JSON","REST API","Desktop Application",],
     },
