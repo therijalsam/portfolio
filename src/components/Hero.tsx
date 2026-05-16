@@ -3,7 +3,7 @@ import { Mail, Linkedin, Github } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
 import bannerImage from './image/cover.jpg';
 
-// Navbar (unchanged)
+
 export function Navbar() {
   return (
     <nav className="w-full bg-white shadow-lg z-50 font-sen">
@@ -58,13 +58,13 @@ export function Hero() {
               delaySpeed={1500}
             />{' '}
             <br></br>
-            I’m Samrakshan Rijal.
+            I’m Sam Rijal.
           </h1>
 
           {/* Right: Paragraph + Buttons */}
           <div className="space-y-6 text-center md:text-left">
             <p className="text-lg text-gray-700 max-w-md mx-auto md:mx-0">
-              I am an aspiring Embedded Software and Robotics Engineer passionate about low-level systems, real-time software, and intelligent autonomous technologies. Currently pursuing a degree in Electrical Engineering at Texas State University while conducting research in robotics visualization, drone planning systems, and interactive C++ software development.
+              Hello, My name is Samrakshan(Sam) Rijal. I am an aspiring Embedded Software and Robotics Engineer passionate about low-level systems, real-time software, and intelligent autonomous technologies. Currently pursuing a degree in Electrical Engineering at Texas State University while conducting research in robotics visualization, drone planning systems, and interactive C++ software development.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
