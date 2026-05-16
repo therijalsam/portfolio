@@ -10,6 +10,7 @@ import sdllds from "./image/3dusingsdl3.png";
 import spiimage from "./image/spi.png";
 import gpioimage from "./image/gpio.png";
 import i2cimage from "./image/i2c.png";
+import adcservo from "./image/adcservo.jpeg";
 
 interface Project {
   title: string;
@@ -89,6 +90,14 @@ export const Projects: React.FC = () => {
       github: "https://github.com/therijalsam/Distributed-Stoplight-System-using-GPIO",
       techStack: ["C", "GPIO", "Embedded Systems", "Microcontrollers"],
     },
+    {
+      title: "iADC and Servo Control System",
+      description:
+        " An embedded systems project built in C that reads analog input from the XADC module, displays ADC values on a 4-digit 7-segment display, and controls a servo motor in real time using TTC0 timer-based PWM generation on a Zynq platform. The system demonstrates low-level hardware interfacing, real-time control, and embedded programming techniques for microcontroller-based applications.",
+      image: adcservo,
+      github: "https://github.com/therijalsam/ADCandSERVO",
+      techStack: [ "C", "Embedded Systems", "Microcontrollers", "PWM", "Zynq" ],
+    },
 
     {
       title: "iGPT AI Desktop Assistant",
@@ -98,6 +107,7 @@ export const Projects: React.FC = () => {
       github: " https://bitbucket.org/oou11/igpt/src/main/src/",
       techStack: [ "Java", "Java Swing","OpenAI API","JSON","REST API","Desktop Application",],
     },
+
   ];
 
   return (
