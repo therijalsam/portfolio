@@ -6,7 +6,7 @@ import shiftappImage from "./image/shiftmakerapp.png";
 import imagecoor from "./image/imagecoorproject.png";
 import cone from "./image/cone.jpg";
 import conexl from "./image/underconstuct.jpg";
-import sdllds from "./image/3dusingsdl3.png";
+import sdllds from "./image/3dsdl.png";
 import spiimage from "./image/spi.png";
 import gpioimage from "./image/gpio.png";
 import i2cimage from "./image/i2c.png";
