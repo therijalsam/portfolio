@@ -1,16 +1,15 @@
 // src/components/Projects.tsx
-import React, { useState, useEffect } from 'react';
-import {
-  Github,
-  ExternalLink,
-  Code2,
-  ChevronLeft,
-  ChevronRight,
-  Cone,
-} from 'lucide-react';
-import shiftappImage from './image/shiftmakerapp.png';
-import imagecoor from './image/imagecoorproject.png';
-import cone from './image/cone.jpg'
+import React from "react";
+import { Github, ExternalLink } from "lucide-react";
+
+import shiftappImage from "./image/shiftmakerapp.png";
+import imagecoor from "./image/imagecoorproject.png";
+import cone from "./image/cone.jpg";
+import conexl from "./image/underconstuct.jpg";
+import sdllds from "./image/3dusingsdl3.png";
+import spiimage from "./image/spi.png";
+import gpioimage from "./image/gpio.png";
+import i2cimage from "./image/i2c.png";
 
 interface Project {
   title: string;
@@ -22,213 +21,167 @@ interface Project {
 }
 
 export const Projects: React.FC = () => {
-  // Your original projects
-  const baseProjects: Project[] = [
+  const projects: Project[] = [
 
     {
-      title: 'Cone',
-      description:
-        'A cross-platform device management agent and CLI for LAN discovery, remote command execution, secure file transfer, and real-time system metrics monitoring across Linux, Raspberry Pi, Debian, and Ubuntu devices.',
-      image: cone ,
-      techStack: ['C++', 'CMake', 'Linux', 'UDP', 'Networking', 'Raspberry Pi', 'Makefile'],
+      title: "ConeXL",
+      description: "Currently Working!!",
+      image: conexl,
+      github: "https://github.com/therijalsam/",
+      techStack: ["C++", "CMake", "Linux", "UDP", "Networking", "MCUs","Python"],
     },
 
     {
-      title: 'Image Click Coordinates Tracker',
+      title: "Cone",
       description:
-        'The Image Click Coordinates Tracker is a lightweight desktop application built with C++, SDL2, and Dear ImGui. It allows users to upload an image, click on any point to mark it, and save the relative coordinates to a text file. This tool is especially useful for annotation, game development, or any task requiring precise coordinate mapping.',
+        "A C++ command-line device management system for LAN discovery, remote command execution, file transfer, and real-time system monitoring across Linux and Raspberry Pi devices.",
+      image: cone,
+      github: "https://github.com/therijalsam/Cone",
+      techStack: ["C++", "CMake", "Linux", "UDP", "Networking", "Raspberry Pi"],
+    },
+    {
+      title: "Image Click Coordinates Tracker",
+      description:
+        "A desktop tool that lets users upload an image, click points, mark coordinates, and export the results to a text file for annotation, mapping, and computer vision workflows.",
       image: imagecoor,
-      github: 'https://github.com/therijalsam/image_coordinates',
-      techStack: [
-        'C++',
-        'SDL2',
-        'SDL2_image',
-        'Dear ImGui',
-        'ImGuiFileDialog',
-        'CMake',
-        'Docker',
-      ],
+      github: "https://github.com/therijalsam/image_coordinates",
+      techStack: ["C++", "SDL2", "Dear ImGui", "CMake", "Docker"],
     },
-
     {
-      title: '3D Using SDL3',
+      title: "Shift Maker App",
       description:
-        'A lightweight 3D rendering and visualization project built with SDL3 and C++ that demonstrates camera movement, object rendering, coordinate transformations, and real-time graphics programming on Linux systems.',
-      image:
-        'lorem',
-      techStack: ['C++', 'SDL3', 'OpenGL', 'CMake', 'Linux'],
-    },
-
-
-    {
-      title: 'SPI Inertial Measurement System',
-      description:
-        'A low-level embedded systems project that interfaces with an inertial measurement sensor over SPI communication to collect and process accelerometer and gyroscope data in real time using register-level programming and microcontroller peripherals.',
-      image:
-        'lorem',
-      techStack: ['C', 'SPI', 'Embedded Systems', 'Microcontrollers', 'UART', 'Linux'],
-    },
-
-    {
-      title: 'Distributed Stoplight System using GPIO',
-      description:
-        'A distributed embedded systems project that simulates an intelligent traffic stoplight network using GPIO communication, synchronized state control, and low-level hardware interfacing for real-time traffic signal management.',
-      image:
-        'lorem',
-      techStack: ['React', 'Redux', 'Node.js', 'Socket.io', 'MongoDB'],
-    },
-
-    {
-      title: 'Shift Maker App',
-      description:
-        'Shift Making App is a modern web application built with React TSX and Vite, designed to streamline shift schedule management. Users can create, view, and generate shift schedules for multiple days, with the ability to track employee availability and set maximum working hours. The app offers a smooth, responsive interface using Lucide React components and allows users to download schedules as PDFs. With features like customizable time slots and employee assignment, it is perfect for managing shifts efficiently. Developed with Node.js and optimized for fast performance.',
+        "A React and TypeScript web app for creating shift schedules, managing employees, setting maximum work hours, and exporting schedules as PDFs.",
       image: shiftappImage,
-      github: 'https://github.com/therijalsam/Shiftmakerapp.git',
-      preview:
-        'https://shiftmakerapp-7gxx9dadd-therijalsams-projects.vercel.app/',
-      techStack: ['React', 'TypeScript', 'Lucide React', 'Node.js', 'Vite'],
+      github: "https://github.com/therijalsam/Shiftmakerapp.git",
+      preview: "https://shiftmakerapp-7gxx9dadd-therijalsams-projects.vercel.app/",
+      techStack: ["React", "TypeScript", "Vite", "Node.js", "Lucide React"],
     },
-    
     {
-      title: 'lorem',
+      title: "3D Using SDL3",
       description:
-        'lorem',
-      image:
-        'lorem',
-      techStack: ['React', 'Redux', 'Node.js', 'Socket.io', 'MongoDB'],
+        "A lightweight C++ graphics project that demonstrates 3D rendering, camera movement, coordinate transformations, and real-time visualization on Linux.",
+      image: sdllds,
+      github: "https://github.com/therijalsam/3dusingsdl3",
+      techStack: ["C++", "SDL3", "OpenGL", "CMake", "Linux"],
     },
-    
+    {
+      title: "SPI Inertial Measurement System",
+      description:
+        "An embedded systems project that communicates with an inertial measurement sensor using SPI to collect accelerometer and gyroscope data in real time.",
+      image: spiimage,
+      github: "https://github.com/therijalsam/SPI-Inertial-Measurement-System",
+      techStack: ["C", "SPI", "Embedded Systems", "UART", "Microcontrollers"],
+    },
+    {
+      title: "Distributed Stoplight System",
+      description:
+        "A low-level embedded project that simulates a traffic light network using GPIO communication, synchronized state control, and real-time hardware logic.",
+      image: gpioimage,
+      github: "https://github.com/therijalsam/Distributed-Stoplight-System-using-GPIO",
+      techStack: ["C", "GPIO", "Embedded Systems", "Microcontrollers"],
+    },
+
+    {
+      title: "I2C Temperature Sensor Interface",
+      description:
+        " A low-level embedded systems project that interfaces with a digital temperature sensor using the I2C communication protocol. The system reads real-time temperature data through direct register communication and processes sensor values using microcontroller peripherals and embedded C programming.",
+      image: i2cimage,
+      github: "https://github.com/therijalsam/Distributed-Stoplight-System-using-GPIO",
+      techStack: ["C", "GPIO", "Embedded Systems", "Microcontrollers"],
+    },
+
+    {
+      title: "iGPT AI Desktop Assistant",
+      description:
+        " A Java desktop AI assistant application built with Java Swing and OpenAI APIs. The project supports conversational AI interactions, AI image generation, configurable personalities, and modern API integration through a desktop interface.",
+      image: image,
+      github: " https://bitbucket.org/oou11/igpt/src/main/src/",
+      techStack: [ "Java", "Java Swing","OpenAI API","JSON","REST API","Desktop Application",],
+    },
   ];
 
-  // Responsive visible count: 1 on mobile, 2.5 on md+
-  const [visibleCount, setVisibleCount] = useState<number>(
-    window.innerWidth < 768 ? 1 : 2.5
-  );
-
-  useEffect(() => {
-    const onResize = () =>
-      setVisibleCount(window.innerWidth < 768 ? 1 : 2.5);
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
-
-  // Duplicate the first `ceil(visibleCount)` items for seamless wrap
-  const extra = Math.ceil(visibleCount);
-  const projects = [...baseProjects, ...baseProjects.slice(0, extra)];
-  const total = baseProjects.length;
-
-  const [current, setCurrent] = useState(0);
-
-  const prev = () => setCurrent((i) => (i - 1 + total) % total);
-  const next = () => setCurrent((i) => (i + 1) % total);
-
-  // Auto-rotate every 10 seconds
-  useEffect(() => {
-    const id = setInterval(next, 10000);
-    return () => clearInterval(id);
-  }, [total]);
-
-  const slideWidth = 100 / visibleCount;
-
   return (
-    <section id="projects" className="py-20 bg-white font-sen">
-      <div className="max-w-screen-xl mx-auto px-4 relative">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
-          Projects
-        </h2>
+    <section id="projects" className="py-24 bg-white font-sen">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+        <div className="mb-16 text-center">
+          <p className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-3">
+            Portfolio
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Selected Projects
+          </h2>
+        </div>
 
-        {/* Always-enabled controls */}
-        <button
-          onClick={prev}
-          aria-label="Previous"
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 p-2 rounded-full z-20 bg-black bg-opacity-50 hover:bg-opacity-75 text-white"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <button
-          onClick={next}
-          aria-label="Next"
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 rounded-full z-20 bg-black bg-opacity-50 hover:bg-opacity-75 text-white"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
-
-        {/* Carousel */}
-        <div className="overflow-hidden">
-          <div
-            className="flex transition-transform duration-500"
-            style={{
-              transform: `translateX(-${current * slideWidth}%)`,
-            }}
-          >
-            {projects.map((proj, idx) => (
+        <div className="space-y-24">
+          {projects.map((project, index) => (
+            <div
+              key={project.title}
+              className="relative min-h-[360px] flex items-center"
+            >
               <div
-                key={idx}
-                className="flex-none px-2"
-                style={{ width: `${slideWidth}%` }}
+                className={`w-full md:w-[58%] h-[310px] md:h-[360px] overflow-hidden bg-gray-200 ${
+                  index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
+                }`}
               >
-                <div className="h-full flex flex-col bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-200">
-                  <div className="relative group">
-                    <img
-                      src={proj.image}
-                      alt={proj.title}
-                      className="w-full h-32 md:h-40 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-200 flex items-center justify-center">
-                      <div className="flex space-x-3 opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-200">
-                        {proj.github && (
-                          <a
-                            href={proj.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-white text-black p-2 rounded-full hover:bg-gray-200 transition-colors"
-                          >
-                            <Github className="w-4 h-4" />
-                          </a>
-                        )}
-                        {proj.preview && (
-                          <a
-                            href={proj.preview}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-white text-black p-2 rounded-full hover:bg-gray-200 transition-colors"
-                          >
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex-grow p-4 flex flex-col">
-                    <h3 className="text-2xl font-semibold mb-2 group-hover:text-indigo-600 transition-colors">
-                      {proj.title}
-                    </h3>
-                    <p className="text-gray-700 text-base mb-4 flex-grow">
-                      {proj.description}
-                    </p>
-                    <div>
-                      <div className="flex items-center mb-2">
-                        <Code2 className="w-5 h-5 text-gray-500 mr-2" />
-                        <span className="text-sm font-semibold text-gray-800">
-                          Tech Stack
-                        </span>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {proj.techStack.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-3 py-1 text-sm bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transition-colors"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div
+                className={`relative md:absolute w-[92%] md:w-[55%] -mt-20 md:mt-0 mx-auto md:mx-0 bg-[#f3c13a] p-8 md:p-12 shadow-xl ${
+                  index % 2 === 0 ? "md:left-0" : "md:right-0"
+                }`}
+              >
+                <h3 className="text-2xl md:text-4xl font-extrabold tracking-wide text-[#4b0b0b] uppercase mb-5">
+                  {project.title}
+                </h3>
+
+                <p className="text-base md:text-lg leading-8 text-[#4b0b0b] mb-6">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-7">
+                  {project.techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 text-sm font-semibold bg-white/40 text-[#4b0b0b] rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-5">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#4b0b0b] border-b-2 border-[#4b0b0b] pb-1 hover:opacity-70 transition"
+                    >
+                      <Github size={18} />
+                      GitHub
+                    </a>
+                  )}
+
+                  {project.preview && (
+                    <a
+                      href={project.preview}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#4b0b0b] border-b-2 border-[#4b0b0b] pb-1 hover:opacity-70 transition"
+                    >
+                      <ExternalLink size={18} />
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
